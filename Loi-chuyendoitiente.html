@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi tien te</title>
+</head>
+<body>
+<script>
+ function convest() {
+let Amount = parseFloat(document.getElementById('amount').value);
+let fromcurrency = document.getElementById('fromcurrency').value;
+let tocurrency =document.getElementById('tocurrency').value;
+let x;
+if(amount="vietnam") {
+    if(fromcurrency="usd") {
+        x= amount/23500;
+    }
+}else{
+    if(tocurrency="vietnam") {
+        x=amount*23500;
+    }
+}
+document.getElementById('convert').innerText=x;
+
+ }
+
+
+
+
+
+</script>
+<form method="post">
+    <table style="width: 100%" >
+        <tr>
+            <td>
+    Amount :<br>
+    <input type="number" id="Amount " name="number" value="">
+            </td>
+
+            <td>
+    From currency <br>
+    <select name="From curreny ">
+        <option value="VN">Viet Nam</option>
+        <option value="NB">My </option>
+        <option value="HQ">Han Quoc </option>
+    </select>
+            </td>
+
+            <td>
+    To Currency <br>
+    <select name="To currency ">
+        <option value="">VND</option>
+        <option value="">USD</option>
+        <option value="">WON</option>
+    </select>
+            </td>
+
+<td>
+    <input type="button" name="" value="Convert ">
+</td>
+
+
+    </table>
+</form>
+</body>
+</html>
