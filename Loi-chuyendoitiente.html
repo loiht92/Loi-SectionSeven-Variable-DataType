@@ -5,62 +5,48 @@
     <title>Chuyen doi tien te</title>
 </head>
 <body>
+<div>
+    <form>
+     <p>Amount</p>
+        <input id="amount" type="text">
+    </form>
+</div>
+<div>
+        <p>From Currency</p>
+        <select id="chuyendoi1">
+            <option value="VND">VND</option>
+            <option value="USD">USD</option>
+        </select>
+</div>
+<div>
+    <p>To Currency</p>
+    <select id="chuyendoi2">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+    </select>
+</div>
+<p>
+    <button onclick="convert()">convert</button> <span id="result"></span>
+</p>
 <script>
- function convest() {
-let Amount = parseFloat(document.getElementById('amount').value);
-let fromcurrency = document.getElementById('fromcurrency').value;
-let tocurrency =document.getElementById('tocurrency').value;
-let x;
-if(amount="vietnam") {
-    if(fromcurrency="usd") {
-        x= amount/23500;
-    }
-}else{
-    if(tocurrency="vietnam") {
-        x=amount*23500;
-    }
-}
-document.getElementById('convert').innerText=x;
-
- }
-
-
-
-
-
+   function convert() {
+       let amount = Number(document.getElementById("amount").value);
+       let from_currency = document.getElementById("chuyendoi1").value;
+       let to_currency = document.getElementById("chuyendoi2").value;
+       let x=0;
+       if (from_currency==="USD" && to_currency==="VND") {
+           x= amount *23000 +"VND" ;
+       }
+       else {
+           if (from_currency==="VND" && to_currency==="USD") {
+               x=amount/23000 +"USD" ;
+           }
+           else {
+               x="nhap lai"
+           }
+       }
+       document.getElementById("result").innerText= x;
+   }
 </script>
-<form method="post">
-    <table style="width: 100%" >
-        <tr>
-            <td>
-    Amount :<br>
-    <input type="number" id="Amount " name="number" value="">
-            </td>
-
-            <td>
-    From currency <br>
-    <select name="From curreny ">
-        <option value="VN">Viet Nam</option>
-        <option value="NB">My </option>
-        <option value="HQ">Han Quoc </option>
-    </select>
-            </td>
-
-            <td>
-    To Currency <br>
-    <select name="To currency ">
-        <option value="">VND</option>
-        <option value="">USD</option>
-        <option value="">WON</option>
-    </select>
-            </td>
-
-<td>
-    <input type="button" name="" value="Convert ">
-</td>
-
-
-    </table>
-</form>
 </body>
 </html>
