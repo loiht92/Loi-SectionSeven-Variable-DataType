@@ -1,48 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Ung dung may tinh </title>
+    <title>Title</title>
 </head>
 <body>
-<h3><b>Calculator</b></h3>
-
 <form>
-    <label for="first_operand">First Operand</label>
-    <input type="text" name="number" id="first_operand">
-    <label for="second_operand">Second Operand</label>
-    <input type="text" name="number" id="second_operand"> <br>
+    <label><input type="text" name="number" id="first"></label>
+    <label><input type="text" name="number" id="last"></label>
 </form>
+<button type="button" onclick="addition()">Addition(+)</button>
+<button type="button" onclick="subtraction()">Subtraction(-)</button>
+<button type="button" onclick="multiplication()">Multiplication(X)</button>
+<button type="button" onclick="division()">Division(/)</button>
+<script>
+    function addition() {
+        let first = document.getElementById('first').value;
+        let last = document.getElementById("last").value;
+        alert("Kết quả: " + (parseFloat(first) + parseFloat(last)));
+    }
 
-<button type="button" value="Addition(+)" onclick="Addition()">Addition(+)</button>
-<button type="button" value="Subtraction(-)" onclick="Subtraction()">Subtraction(-)</button>
-<button type="button" value="Multiplication(x)" onclick="Multiplication()">Multiplication(x)</button>
-<button type="button" value="Division(/)" onclick="Division()">Division(/)</button>
-<script>
-    function Addition() {
-        let firstOperand = document.getElementById('first_operand').value;
-        let secondOperand = document.getElementById('second_operand').value;
-        alert("Result: " + (parseFloat(firstOperand) + parseFloat(secondOperand)));
+    function subtraction() {
+        let first = document.getElementById("first").value;
+        let last = document.getElementById("last").value;
+        alert("Kết quả: " + (parseFloat(first) - parseFloat(last)));
     }
-</script>
-<script>
-    function Subtraction() {
-        let firstOperand = document.getElementById('firse_Operand').value;
-        let secondOperand = document.getElementById('second_operand').value;
-        alert("result: " + (parseFloat(firstOperand) - parseFloat(secondOperand)));
+
+    function multiplication() {
+        let first = document.getElementById("first").value;
+        let last = document.getElementById("last").value;
+        alert("Kết quả: " + (parseFloat(first) * parseFloat(last)));
     }
-</script>
-<script>function Multiplication() {
-    let firstOperand = document.getElementById('first_Operand').value;
-    let secondOperand = document.getElementById('second_Operand').value;
-    alert("result: " + (parseFloat(firstOperand) * parseFloat(secondOperand)));
-}
-</script>
-<script>function Division() {
-    let firstOperand = document.getElementById('first_Operand').value;
-    let secondOperand = document.getElementById('second_Operand').value;
-    alert("result:" + (parseFloat(firstOperand) / parseFloat(secondOperand)));
-}
+
+    function division() {
+        let first = document.getElementById("first").value;
+        let last = document.getElementById("last").value;
+        alert("Kết quả: " + (parseFloat(first) / parseFloat(last)));
+    }
 </script>
 </body>
-</html>
