@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Diem trung binh </title>
@@ -8,17 +7,14 @@
 <script>
     function tinhdiemtrungbinhvatongcuachung() {
     }
-    let a,b,c,z,i;
-    a=prompt('diem vat ly ');
-    a=parseInt(a);
-    b=prompt('diem hoa hoc ');
-    b=parseInt(b);
-    c=prompt('diem sinh hoc ');
-    c=parseInt(c);
-    i= a+b+c;
-    alert("Tong diem 3 mon la :" +i);
-    z=i/3;
-    alert("Diem trung binh 3 mon la :" +z)
+
+    let a=parseInt(prompt('diem vat ly '));
+    let b=parseInt(prompt('diem hoa hoc '));
+    let c=parseInt(prompt('diem sinh hoc '));
+    let tong,dtb;
+    tong = a+b+c;
+    alert("Tong diem 3 mon la :" +tong);
+    dtb =(a+b+c)/3;
+    alert("Diem trung binh 3 mon la :" +dtb)
 </script>
 </body>
-</html>

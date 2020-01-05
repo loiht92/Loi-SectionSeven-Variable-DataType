@@ -1,7 +1,5 @@
-let a,b,c;
-a=prompt('nhap chieu rong hinh chu nhat');
-a=parseInt(a)
-b=prompt('nhap chieu dai hinh chu nhat')
-b=parseInt(b);
-c=a*b;
-alert("dien tich la:" +c)
+let a=parseInt(prompt('nhap chieu rong hinh chu nhat'));
+let b=parseInt(prompt('nhap chieu dai hinh chu nhat'));
+let dt;
+dt=a*b;
+alert("dien tich la:" +dt)
